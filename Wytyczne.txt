@@ -1,0 +1,19 @@
+
+Wtyczki BS ( co najmniej 2 wtyczki np. Carousel, Scrollspy, Tooltip) 
+
+
+
+STOPKA
+
+ZROBIONE
+Elementy strony  zastosowanie klas BS  - treœæ +media+ jQuery 	
+Projekt z zastosowaniem siatki BS  JEST
+Projekt (standardy W3C- HTML5, CSS3. WCAG) 
+Dodatkowy zewnêtrzny CSS zawieraj¹cy klasy projektanta 
+RWD 
+Szablon niestandardowy BS ( np.  http://bootswatch.com inne style)  JEST
+Zastosowanie jQuery - AJAX (np. do dynamicznego prze³¹czania stron metoda load() ) 
+Elementy strony – Menu- zastosowanie klas BS 
+Galeria mediów – efekty jQuery (np. Efekt Rollover) 
+Zastosowanie wybranego kolejnego pluginu jQuery na dowolny temat  (np. do walidacji formularzy, map, wykresów, rozpoznawania twarzy,  UX ) 
+Elementy strony zastosowanie klas BS – Tabela + jQuery 

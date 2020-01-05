@@ -1,0 +1,65 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Statystyki</title>
+    <meta charset="utf-8">
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.4/content/tables/">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/highcharts.js"></script>
+	<script src="js/jquery.highchartTable.js" type="text/javascript"></script
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+<script>
+$(document).ready(function(){
+$("#navi").load("zasob/nav.html")
+  $('#highchart').highchartTable();
+});
+</script>
+  </head>
+<body>
+<div id="navi"></div>
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
+<table class="table table-hover table-dark" id="highchart" data-graph-container-before="1" data-graph-type="column">
+   <thead class="thead-dark">
+      <tr>
+          <th>Rasa</th>
+          <th>Populacja</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+          <td>Abisyński</td>
+          <td>82345</td>
+      </tr>
+      <tr>
+          <td>Amerykański curl długowłosy</td>
+          <td>165321</td>
+      </tr>
+	  <tr>
+          <td>Ashera</td>
+          <td>122321</td>
+      </tr>
+	  <tr>
+          <td>Bengalski</td>
+          <td>120230</td>
+      </tr>
+	  <tr>
+          <td>Burmilla</td>
+          <td>12000</td>
+      </tr>
+	  <tr>
+          <td>burmski</td>
+          <td>123310</td>
+      </tr>
+  </tbody>
+</table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Koty</title>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+$(document).ready(function(){
+  $("#navi").load("zasob/nav.html")
+  let img = $('img'),
+  src =  img.attr("src"),
+  altSrc = img.attr("data-alt-src");
+  
+  img.css({
+    "width": img.width(),
+    "height": img.height(),
+    "display": "block",
+    "background": "url("+src+")",
+    "transition": "all 0.6s ease-in-out"
+  })
+  img.attr("src", "");
+  img.attr("alt", "");
+      
+ img
+   .mouseenter(()=>{
+     img.css({
+      "background": "url("+altSrc+")",
+     })
+   })
+   .mouseleave(()=>{
+    img.css({
+      "background": "url("+src+")",
+    })
+   })
+})
+</script>
+
+  </head>
+<body>
+<div id=navi></div>
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<div class="w3-third w3-row>
+<div style='display: flex; justify-content: center;'>
+  <a href="#">
+    <img src="images/kot2.jpg" class="pics" data-alt-src="images/kot4.jpg" >
+  </a>
+</div>
+<div class="w3-third w3-row>
+<div style='display: flex; justify-content: center;'>
+  <a href="#">
+    <img src="images/kot2.jpg" class="pics" data-alt-src="images/kot4.jpg" >
+  </a>
+</div>
+<div class="w3-third w3-row>
+<div style='display: flex; justify-content: center;'>
+  <a href="#">
+    <img src="images/kot2.jpg" class="pics" data-alt-src="images/kot4.jpg" >
+  </a>
+</div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+</div>
+</body>
+</html>

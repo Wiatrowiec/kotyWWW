@@ -1,0 +1,130 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Koty</title>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+$(document).ready(function(){
+   $("#navi").load("zasob/nav.html")
+   $('#name').on('blur', function() {
+		var input = $(this);
+		var name_length = input.val().length;
+		if(name_length >= 5 && name_length <= 15){
+			input.removeClass("invalid").addClass("valid");
+			input.next('.komunikat').text("Wprowadzono poprawną nazwę.").removeClass("blad").addClass("ok");
+		}
+		else{
+			input.removeClass("valid").addClass("invalid");
+			input.next('.komunikat').text("Nazwa musi mieć więcej niż 4 i mniej niż 16 znaków!").removeClass("ok").addClass("blad");
+			
+		}
+});
+	$('#email').on('blur', function() {
+		var input = $(this);
+		var pattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+		var is_email = pattern.test(input.val());
+		if(is_email){
+			input.removeClass("invalid").addClass("valid");
+			input.next('.komunikat').text("Wprowadzono poprawny email.").removeClass("blad").addClass("ok");
+		}
+		else{
+			input.removeClass("valid").addClass("invalid");
+			input.next('.komunikat').text("Wprowadź poprawny email!").removeClass("ok").addClass("blad");
+		}
+});   
+	$('#message').on('blur', function() {
+		var input = $(this);
+		var message = $(this).val();
+		if(message){
+			input.removeClass("invalid").addClass("valid");
+			input.next('.komunikat').text("Wprowadzono poprawną wiadomość.").removeClass("blad").addClass("ok");
+		}
+		else{
+			input.removeClass("valid").addClass("invalid");
+			input.next('.komunikat').text("Wiadomość nie może być pusta!").removeClass("ok").addClass("blad");
+		}   
+});
+		$('#submit button').click(function(event){
+			var name = $('#name');
+			var email = $('#email');
+			var message = $('#message');	
+			
+			if(name.hasClass('valid') && email.hasClass('valid') && message.hasClass('valid')){
+				alert("Pomyślnie wysłano formularz.");	
+			}
+			else {
+				event.preventDefault();
+				alert("Uzupełnij wszystkie pola!");	
+			}
+});
+   $('#name_kot').prop('disabled', true);
+   function myFunction() {
+   $('#name_kot').prop('disabled', false);
+   }
+   });
+   
+
+</script>
+  </head>
+<body>
+<div id=navi></div>
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<center>
+<br>
+<h1>Uzupelnij informacje o twoim kocie</h1>
+</br>
+
+<form id="formularz" method="post" action="">
+    
+        <div>
+            <label for="name">Imie:</label>
+            <input type="text" id="name" name="name"></input>
+            <span class="komunikat"></span>
+        </div>
+       
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"></input>
+            <span class="komunikat"></span>          
+        </div>                        
+        
+        <div>
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message"></textarea>
+            <span class="komunikat"></span>                                               
+        </div>                    
+		<div>
+		 <h4> Czy posiadasz kota?</h4>
+			<label id="wybor1" class="checkbox-inline"><input type="checkbox" onclick="myFunction()" value="">Tak</label>
+			<label class="checkbox-inline"><input type="checkbox" value="">Nie</label>
+		</div>
+		<div>
+            <label for="name">Imie kota:</label>
+            <input type="text" id="name_kot" name="name_kot"></input>
+            <span class="komunikat"></span>
+        </div>      
+		
+		
+        <div id="submit">             
+            <button type="submit">Wyślij</button>
+        </div>
+  
+  
+  
+  
+</form> 
+
+</center>
+
+
+
+</div>
+</body>
+</html>

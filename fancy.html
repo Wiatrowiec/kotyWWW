@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Koty</title>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="css/fancybox_jquery.fancybox.css v=2.1.5.css">	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+<body>
+<div id=navi></div>
+<div class="w3-content" style="max-width:900px;max-height=700px	;margin-top:46px">
+<ul>
+				<li><a class="fancybox-images" rel="group" href="images/kot1.jpg" >Image 1</a></li>
+				<li><a class="fancybox-images" rel="group" href="images/kot2.jpg" >Image 2</a></li>
+				<li><a class="fancybox-images" rel="group" href="images/kot3.jpg" >Image 3</a></li>
+				<li><a class="fancybox-images" rel="group" href="images/kot4.jpg" >Image 4</a></li>
+			</ul>
+</div>
+			<script src="js/jquery-3.4.1.min.js"></script>
+			<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+				<script>
+$(document).ready(function(){
+   $("#navi").load("zasob/nav.html")
+    $(".fancybox-images").fancybox({
+					    helpers:  {
+					        title : {
+					            type : 'inside'
+					        },
+					        overlay : {
+					            showEarly : false,
+					            css : {
+					                'background' : 'rgba(12, 59, 137, 0.75)'
+					            }
+					        }
+					    }
+					});
+   });
+   
+
+</script>
+</body>
+</html>
